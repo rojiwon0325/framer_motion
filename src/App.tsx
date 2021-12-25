@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import InDrag from "./InDrag";
+import GestureNDrag from "./Gesture";
+import Variant from "./Variant";
+import Motion from "./MotionValue";
+import SvgAnimate from "./SvgAnimate";
+import AnimatePresenceBox from "./AnimatePresence";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Variant />
+      <SvgAnimate />
+      <GestureNDrag />
+      <InDrag />
+      <Motion />
+      <AnimatePresenceBox />
+    </Wrapper>
   );
 }
 
 export default App;
+
+const Wrapper = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
